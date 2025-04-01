@@ -1,4 +1,4 @@
-import { configureStore, combineReducers } from "redux";
+import { legacy_createStore as createStore, combineReducers } from "redux";
 
 // Action Types
 const ADD_TASK = "ADD_TASK";
@@ -61,4 +61,4 @@ const rootReducer = combineReducers({
   visibilityFilter: visibilityFilterReducer,
 });
 
-export const store = configureStore(rootReducer);
+export const store = createStore(rootReducer);
